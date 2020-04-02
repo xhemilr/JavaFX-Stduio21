@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<DialogPane maxHeight="400.0" maxWidth="350.0" minHeight="400.0" minWidth="350.0" prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.windows.additem.ItemDialogController">
+   <content>
+      <GridPane hgap="10.0" maxHeight="400.0" maxWidth="350.0" minHeight="400.0" minWidth="350.0" prefHeight="400.0" prefWidth="350.0" vgap="10.0">
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+<!--         <children>-->
+            <Label text="Contact:" GridPane.rowIndex="1" />
+            <Label text="Phone Number" GridPane.rowIndex="2" />
+            <Label text="Product Type" GridPane.rowIndex="3" />
+            <Label text="Serial Number" GridPane.rowIndex="4" />
+            <Label text="Product Description" GridPane.rowIndex="5" />
+            <Label text="Service Description" GridPane.rowIndex="6" />
+            <Label text="Price" GridPane.rowIndex="8" />
+            <TextField fx:id="txtContact" promptText="Contact Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPhoneNumber" promptText="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtProductType" promptText="ex. Laptop, Tablet, Phone, etc." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtSerialNumber" promptText="Serial Number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtProductDescription" promptText="Brand, Model, etc." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtComments" prefHeight="200.0" prefWidth="200.0" promptText="Comment for service request" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+            <TextField fx:id="txtPrice" promptText="Price in MKD" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+<!--         </children>-->
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+      </GridPane>
+   </content>
+   <header>
+      <Label alignment="CENTER" text="Add new service item" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </header>
+</DialogPane>

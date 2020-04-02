@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="mainBorderPane" minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.windows.main.MainWindowController">
+    <top>
+        <VBox>
+            <HBox>
+                <MenuBar>
+                    <Menu text="File">
+                        <MenuItem fx:id="mnNewItem" text="New" />
+                        <MenuItem fx:id="mnEditItem" text="Edit" />
+                        <MenuItem fx:id="mnDeleteItem" text="Delete" />
+                        <SeparatorMenuItem />
+                        <MenuItem fx:id="refreshItems" mnemonicParsing="false" text="Refresh Items" />
+                        <SeparatorMenuItem />
+                        <MenuItem fx:id="mnExit" text="Exit" />
+                    </Menu>
+                </MenuBar>
+                <MenuBar>
+                    <Menu text="Settings">
+                        <MenuItem fx:id="mnServerSettings" text="Server Settings" />
+                        <MenuItem text="Printer Settings" />
+                    </Menu>
+                </MenuBar>
+            </HBox>
+            <ToolBar>
+                <HBox spacing="5.0">
+                    <Button fx:id="btnNewItem" text="New..." />
+                    <ToggleButton fx:id="tglOpenItems" text="Open Items">
+                        <tooltip>
+                            <Tooltip text="Button down: Show today's items only. Button up: Show all items" />
+                        </tooltip>
+                    </ToggleButton>
+                    <ToggleButton fx:id="tglOpenPayments" text="Open Payments">
+                        <tooltip>
+                            <Tooltip text="Button down: Show today's items only. Button up: Show all items" />
+                        </tooltip>
+                    </ToggleButton>
+                    <Button fx:id="btnRefreshData" text="Refresh Data" />
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+   <center>
+      <GridPane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+<!--        <children>-->
+            <TableView fx:id="tblItems" prefHeight="94.0" prefWidth="322.0" style="-fx-alignment: CENTER_RIGHT;" GridPane.columnSpan="6" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+
+            <TextArea fx:id="txtComments" prefHeight="42.0" prefWidth="112.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="3" />
+
+            <Pane prefHeight="96.0" prefWidth="130.0" GridPane.columnSpan="3" GridPane.rowIndex="6" GridPane.rowSpan="6">
+<!--               <children>-->
+                  <Label layoutX="15.0" layoutY="5.0" text="Product Type:" />
+                  <Label layoutX="15.0" layoutY="40.0" text="Serial Number:" />
+                  <Label fx:id="lblProductType" layoutX="130.0" layoutY="5.0" />
+                  <Label fx:id="lblSerialNumber" layoutX="130.0" layoutY="40.0" />
+                  <Label layoutX="15.0" layoutY="75.0" text="Product Description:" />
+                  <Label fx:id="lblProductDesc" layoutX="130.0" layoutY="75.0" />
+                  <Label layoutX="15.0" layoutY="110.0" text="Received Date:" />
+                  <Label fx:id="lblDateReceived" layoutX="130.0" layoutY="110.0" />
+                  <Label layoutX="15.0" layoutY="145.0" text="Release Date:" />
+                  <Label fx:id="lblDateReleased" layoutX="130.0" layoutY="145.0" />
+                  <Label layoutX="15.0" layoutY="180.0" text="Service Status:" />
+                  <Label fx:id="lblServiceStatus" layoutX="130.0" layoutY="180.0" />
+                  <Label layoutX="15.0" layoutY="215.0" text="Payment Status:" />
+                  <Label fx:id="lblPaymentStatus" layoutX="130.0" layoutY="215.0" />
+<!--               </children>-->
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="10" GridPane.rowSpan="2">
+<!--               <children>-->
+                  <Label layoutX="14.0" layoutY="23.0" text="Total">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font></Label>
+                  <Label fx:id="lblPrice" layoutX="132.0" layoutY="23.0" text="0.0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+<!--               </children>-->
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="6">
+<!--               <children>-->
+                  <Label layoutX="14.0" layoutY="6.0" text="Search by SN:" />
+                  <TextField fx:id="txtSearchBySN" layoutX="110.0" layoutY="2.0" prefHeight="25.0" prefWidth="162.0" />
+                  <Label layoutX="311.0" layoutY="6.0" text="Search by Name:" />
+                  <TextField fx:id="txtSearchByName" layoutX="410.0" layoutY="2.0" prefHeight="25.0" prefWidth="183.0" />
+<!--               </children>-->
+            </Pane>
+            <Pane layoutX="310.0" layoutY="428.0" prefHeight="33.0" prefWidth="300.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+<!--               <children>-->
+                  <Label layoutX="40.0" layoutY="10.0" text="Contact:">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label layoutX="182.0" layoutY="10.0" text="Phone:">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblPhoneNumber" layoutX="182.0" layoutY="39.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Label fx:id="lblContact" layoutX="40.0" layoutY="39.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+<!--               </children>-->
+            </Pane>
+<!--         </children>-->
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="15.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<!--         <children>-->
+            <CheckBox fx:id="chkbFilterByDate" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" text="Filter by Received Period" />
+            <DatePicker fx:id="dtPickerFrom" layoutX="81.0" layoutY="57.0" prefHeight="25.0" prefWidth="106.0" />
+            <DatePicker fx:id="dtPickerTo" layoutX="81.0" layoutY="98.0" prefHeight="25.0" prefWidth="106.0" />
+            <Label layoutX="19.0" layoutY="63.0" text="From:" />
+            <Label layoutX="19.0" layoutY="102.0" text="To:" />
+<!--         </children>-->
+      </Pane>
+   </right>
+</BorderPane>

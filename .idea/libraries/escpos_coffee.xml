@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="escpos-coffee">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar files/escpos-coffee.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
